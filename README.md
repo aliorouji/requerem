@@ -1,23 +1,39 @@
-# requerem
-require module that takes care of project modules and prevents require('../../../../foo') thing
+requerem
+========
+
+a "require" replacement that prevents `require('../../../../foo')` thing when working with multiple modules in nodejs apps.
 
 ## Installation
-
+   
+   ```
    npm install requerem --save
+   ```
 
 ## Usage
 
-   In every js file of your app, before any other requires add this line:
+   In top of your main js script (app.js) add: 
 
-   var require = require('requerem');
+   ```javascript
+   globals.require = require('requerem');
+   ```
 
-   now you can require both your app-specific and installed modules using this new require function.
+   now you can simply require your app-specific modules relative to your project root:
 
+   ```javascript
    var User = require('models/User'); // app-specific module (relative to project root)
+   ```
 
-   or 
+   and requiring npm-installed modules stays the same as before:
 
+   ```javascript
    var mongoose = require('mongoose'); // installed modules
+   ```
+
+   also relative paths:
+
+   ```javascript
+   var config = require('./config');
+   ```
 
 ## Tests
 

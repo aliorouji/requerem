@@ -1,7 +1,7 @@
 {
   "name": "requerem",
-  "version": "0.1.0",
-  "description": "require module that takes care of project modules and prevents require('../../../../foo') thing",
+  "version": "0.1.1",
+  "description": "a \"require\" replacement that prevents `require('../../../../foo')` thing when working with multiple modules in nodejs apps.",
   "main": "requerem.js",
   "scripts": {
     "test": "gulp test"
@@ -12,8 +12,8 @@
   },
   "keywords": [
     "require",
-    "nodejs",
-    "node",
+    "requerem",
+    "multi module node app",
     "app-root",
     "app-root-path"
   ],
