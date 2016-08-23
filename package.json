@@ -1,6 +1,6 @@
 {
   "name": "requerem",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "a \"require\" replacement that prevents `require('../../../../foo')` thing when working with multiple modules in nodejs apps.",
   "main": "requerem.js",
   "scripts": {
