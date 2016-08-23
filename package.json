@@ -1,6 +1,6 @@
 {
   "name": "requerem",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "require module that takes care of project modules and prevents require('../../../../foo') thing",
   "main": "requerem.js",
   "scripts": {
