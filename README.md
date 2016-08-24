@@ -14,7 +14,7 @@ a "require" replacement that prevents `require('../../../../foo')` thing when wo
    In top of your main js script (app.js) add: 
 
    ```javascript
-   global.require = require('requerem');
+   require('requerem'); // it adds your app-root to module resolver path
    ```
 
    now you can simply require your app-specific modules relative to your project root:

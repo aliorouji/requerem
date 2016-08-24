@@ -11,4 +11,9 @@ describe('requerem', function () {
         var app_root_path = requerem('app-root-path');
         app_root_path.should.to.be.ok;
     });
+
+    it('requires relative modules correctly', function() {
+        var relative = requerem('../requerem');
+        relative.should.to.be.ok;
+    });
 });

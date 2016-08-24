@@ -1,9 +1,6 @@
 var appRoot = require('app-root-path');
+require('app-module-path').addPath(appRoot.path);
 
 module.exports = function(lib) {
-    try {
-        return require(appRoot + "/" + lib);
-    } catch (err) {
-        return require(lib);
-    }
+    return require(lib);
 };
